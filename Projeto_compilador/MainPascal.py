@@ -5,7 +5,7 @@ import sys
 import os
 def main():
    
-    path = os.path.join(os.path.dirname(__file__), "teste.lion")
+    path = os.path.join(os.path.dirname(__file__), "Pascal.lion")
     input_stream = FileStream(path, encoding='utf-8')
 
     # Lexer
@@ -22,7 +22,7 @@ def main():
     parser = ExprParser(token_stream)
     try:
         parser.program()  # esse deve ser o nome da sua regra inicial
-        print("\nAnálise concluída com sucesso! Nenhum erro léxico ou sintático encontrado.")
+        
     except Exception as e:
         print(f"\n{e}")
 

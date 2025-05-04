@@ -6,7 +6,7 @@ import sys
 
 class ASTVisualizer(ParseTreeListener):
     def __init__(self):
-        self.graph = Digraph('AST', format='png')
+        self.graph = Digraph('AstTriangulo', format='png')
         self.count = 0
         self.stack = []
 
@@ -33,7 +33,7 @@ class ASTVisualizer(ParseTreeListener):
             self.graph.edge(self.stack[-1], node_id)
 
 def main():
-    input_file = 'teste.lion'  # ou input.txt se preferir
+    input_file = 'Triangulo.lion'  # ou input.txt se preferir
     input_stream = FileStream(input_file, encoding="utf-8")
 
     lexer = ExprLexer(input_stream)
@@ -50,7 +50,7 @@ def main():
     walker = ParseTreeWalker()
     walker.walk(visualizer, tree)
 
-    visualizer.graph.render('ast', view=False)  # Gera ast.dot e ast.png
+    visualizer.graph.render('AstTriangulo', view=False)  # Gera ast.dot e ast.png
     print("AST gerada como 'ast.dot' e 'ast.png'")
 
 if __name__ == '__main__':
