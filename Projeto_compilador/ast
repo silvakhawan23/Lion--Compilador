@@ -1,0 +1,499 @@
+digraph AST {
+	node1 [label=program]
+	node2 [label="@start"]
+	node1 -> node2
+	node3 [label=declarations]
+	node1 -> node3
+	node4 [label=declaration]
+	node3 -> node4
+	node5 [label=variableDeclaration]
+	node4 -> node5
+	node6 [label=roar]
+	node5 -> node6
+	node7 [label=n]
+	node5 -> node7
+	node8 [label=as]
+	node5 -> node8
+	node9 [label=type]
+	node5 -> node9
+	node10 [label=int]
+	node9 -> node10
+	node11 [label=";"]
+	node5 -> node11
+	node12 [label=declaration]
+	node3 -> node12
+	node13 [label=variableDeclaration]
+	node12 -> node13
+	node14 [label=roar]
+	node13 -> node14
+	node15 [label=linha]
+	node13 -> node15
+	node16 [label=as]
+	node13 -> node16
+	node17 [label=type]
+	node13 -> node17
+	node18 [label=text]
+	node17 -> node18
+	node19 [label=";"]
+	node13 -> node19
+	node20 [label=declaration]
+	node3 -> node20
+	node21 [label=variableDeclaration]
+	node20 -> node21
+	node22 [label=roar]
+	node21 -> node22
+	node23 [label=i]
+	node21 -> node23
+	node24 [label=as]
+	node21 -> node24
+	node25 [label=type]
+	node21 -> node25
+	node26 [label=int]
+	node25 -> node26
+	node27 [label=";"]
+	node21 -> node27
+	node28 [label=declaration]
+	node3 -> node28
+	node29 [label=variableDeclaration]
+	node28 -> node29
+	node30 [label=roar]
+	node29 -> node30
+	node31 [label=j]
+	node29 -> node31
+	node32 [label=as]
+	node29 -> node32
+	node33 [label=type]
+	node29 -> node33
+	node34 [label=int]
+	node33 -> node34
+	node35 [label=";"]
+	node29 -> node35
+	node36 [label=declaration]
+	node3 -> node36
+	node37 [label=command]
+	node36 -> node37
+	node38 [label=inputCommand]
+	node37 -> node38
+	node39 [label=hunt]
+	node38 -> node39
+	node40 [label="("]
+	node38 -> node40
+	node41 [label=n]
+	node38 -> node41
+	node42 [label=")"]
+	node38 -> node42
+	node43 [label=";"]
+	node38 -> node43
+	node44 [label=declaration]
+	node3 -> node44
+	node45 [label=command]
+	node44 -> node45
+	node46 [label=ifCommand]
+	node45 -> node46
+	node47 [label=if]
+	node46 -> node47
+	node48 [label=expression]
+	node46 -> node48
+	node49 [label=logicalExpression]
+	node48 -> node49
+	node50 [label=logicalTerm]
+	node49 -> node50
+	node51 [label=logicalFactor]
+	node50 -> node51
+	node52 [label=comparison]
+	node51 -> node52
+	node53 [label=arithmeticExpression]
+	node52 -> node53
+	node54 [label=term]
+	node53 -> node54
+	node55 [label=factor]
+	node54 -> node55
+	node56 [label=n]
+	node55 -> node56
+	node57 [label=comparisonOperator]
+	node52 -> node57
+	node58 [label="<="]
+	node57 -> node58
+	node59 [label=arithmeticExpression]
+	node52 -> node59
+	node60 [label=term]
+	node59 -> node60
+	node61 [label=factor]
+	node60 -> node61
+	node62 [label=0]
+	node61 -> node62
+	node63 [label=then]
+	node46 -> node63
+	node64 [label=block]
+	node46 -> node64
+	node65 [label="{"]
+	node64 -> node65
+	node66 [label=declarations]
+	node64 -> node66
+	node67 [label=declaration]
+	node66 -> node67
+	node68 [label=command]
+	node67 -> node68
+	node69 [label=outputCommand]
+	node68 -> node69
+	node70 [label=roarout]
+	node69 -> node70
+	node71 [label="("]
+	node69 -> node71
+	node72 [label=expression]
+	node69 -> node72
+	node73 [label="\"Erro: número deve ser maior que zero!\""]
+	node72 -> node73
+	node74 [label=")"]
+	node69 -> node74
+	node75 [label=";"]
+	node69 -> node75
+	node76 [label="}"]
+	node64 -> node76
+	node77 [label=else]
+	node46 -> node77
+	node78 [label=block]
+	node46 -> node78
+	node79 [label="{"]
+	node78 -> node79
+	node80 [label=declarations]
+	node78 -> node80
+	node81 [label=declaration]
+	node80 -> node81
+	node82 [label=command]
+	node81 -> node82
+	node83 [label=assignment]
+	node82 -> node83
+	node84 [label=i]
+	node83 -> node84
+	node85 [label="="]
+	node83 -> node85
+	node86 [label=expression]
+	node83 -> node86
+	node87 [label=arithmeticExpression]
+	node86 -> node87
+	node88 [label=term]
+	node87 -> node88
+	node89 [label=factor]
+	node88 -> node89
+	node90 [label=0]
+	node89 -> node90
+	node91 [label=";"]
+	node83 -> node91
+	node92 [label=declaration]
+	node80 -> node92
+	node93 [label=command]
+	node92 -> node93
+	node94 [label=whileCommand]
+	node93 -> node94
+	node95 [label=while]
+	node94 -> node95
+	node96 [label=expression]
+	node94 -> node96
+	node97 [label=logicalExpression]
+	node96 -> node97
+	node98 [label=logicalTerm]
+	node97 -> node98
+	node99 [label=logicalFactor]
+	node98 -> node99
+	node100 [label=comparison]
+	node99 -> node100
+	node101 [label=arithmeticExpression]
+	node100 -> node101
+	node102 [label=term]
+	node101 -> node102
+	node103 [label=factor]
+	node102 -> node103
+	node104 [label=i]
+	node103 -> node104
+	node105 [label=comparisonOperator]
+	node100 -> node105
+	node106 [label="<"]
+	node105 -> node106
+	node107 [label=arithmeticExpression]
+	node100 -> node107
+	node108 [label=term]
+	node107 -> node108
+	node109 [label=factor]
+	node108 -> node109
+	node110 [label=n]
+	node109 -> node110
+	node111 [label=strike]
+	node94 -> node111
+	node112 [label=block]
+	node94 -> node112
+	node113 [label="{"]
+	node112 -> node113
+	node114 [label=declarations]
+	node112 -> node114
+	node115 [label=declaration]
+	node114 -> node115
+	node116 [label=command]
+	node115 -> node116
+	node117 [label=assignment]
+	node116 -> node117
+	node118 [label=linha]
+	node117 -> node118
+	node119 [label="="]
+	node117 -> node119
+	node120 [label=expression]
+	node117 -> node120
+	node121 [label="\"1\""]
+	node120 -> node121
+	node122 [label=";"]
+	node117 -> node122
+	node123 [label=declaration]
+	node114 -> node123
+	node124 [label=command]
+	node123 -> node124
+	node125 [label=assignment]
+	node124 -> node125
+	node126 [label=j]
+	node125 -> node126
+	node127 [label="="]
+	node125 -> node127
+	node128 [label=expression]
+	node125 -> node128
+	node129 [label=arithmeticExpression]
+	node128 -> node129
+	node130 [label=term]
+	node129 -> node130
+	node131 [label=factor]
+	node130 -> node131
+	node132 [label=1]
+	node131 -> node132
+	node133 [label=";"]
+	node125 -> node133
+	node134 [label=declaration]
+	node114 -> node134
+	node135 [label=command]
+	node134 -> node135
+	node136 [label=whileCommand]
+	node135 -> node136
+	node137 [label=while]
+	node136 -> node137
+	node138 [label=expression]
+	node136 -> node138
+	node139 [label=logicalExpression]
+	node138 -> node139
+	node140 [label=logicalTerm]
+	node139 -> node140
+	node141 [label=logicalFactor]
+	node140 -> node141
+	node142 [label=comparison]
+	node141 -> node142
+	node143 [label=arithmeticExpression]
+	node142 -> node143
+	node144 [label=term]
+	node143 -> node144
+	node145 [label=factor]
+	node144 -> node145
+	node146 [label=j]
+	node145 -> node146
+	node147 [label=comparisonOperator]
+	node142 -> node147
+	node148 [label="<"]
+	node147 -> node148
+	node149 [label=arithmeticExpression]
+	node142 -> node149
+	node150 [label=term]
+	node149 -> node150
+	node151 [label=factor]
+	node150 -> node151
+	node152 [label=i]
+	node151 -> node152
+	node153 [label=strike]
+	node136 -> node153
+	node154 [label=block]
+	node136 -> node154
+	node155 [label="{"]
+	node154 -> node155
+	node156 [label=declarations]
+	node154 -> node156
+	node157 [label=declaration]
+	node156 -> node157
+	node158 [label=command]
+	node157 -> node158
+	node159 [label=assignment]
+	node158 -> node159
+	node160 [label=linha]
+	node159 -> node160
+	node161 [label="="]
+	node159 -> node161
+	node162 [label=expression]
+	node159 -> node162
+	node163 [label=expression]
+	node162 -> node163
+	node164 [label=expression]
+	node163 -> node164
+	node165 [label=arithmeticExpression]
+	node164 -> node165
+	node166 [label=term]
+	node165 -> node166
+	node167 [label=factor]
+	node166 -> node167
+	node168 [label=linha]
+	node167 -> node168
+	node169 [label="+"]
+	node163 -> node169
+	node170 [label=expression]
+	node163 -> node170
+	node171 [label="\" \""]
+	node170 -> node171
+	node172 [label="+"]
+	node162 -> node172
+	node173 [label=expression]
+	node162 -> node173
+	node174 [label=arithmeticExpression]
+	node173 -> node174
+	node175 [label=term]
+	node174 -> node175
+	node176 [label=factor]
+	node175 -> node176
+	node177 [label="("]
+	node176 -> node177
+	node178 [label=arithmeticExpression]
+	node176 -> node178
+	node179 [label=term]
+	node178 -> node179
+	node180 [label=factor]
+	node179 -> node180
+	node181 [label=i]
+	node180 -> node181
+	node182 [label=termOperator]
+	node179 -> node182
+	node183 [label="*"]
+	node182 -> node183
+	node184 [label=factor]
+	node179 -> node184
+	node185 [label="("]
+	node184 -> node185
+	node186 [label=arithmeticExpression]
+	node184 -> node186
+	node187 [label=term]
+	node186 -> node187
+	node188 [label=factor]
+	node187 -> node188
+	node189 [label=i]
+	node188 -> node189
+	node190 [label=arithmeticOperator]
+	node186 -> node190
+	node191 [label="-"]
+	node190 -> node191
+	node192 [label=term]
+	node186 -> node192
+	node193 [label=factor]
+	node192 -> node193
+	node194 [label=1]
+	node193 -> node194
+	node195 [label=")"]
+	node184 -> node195
+	node196 [label=")"]
+	node176 -> node196
+	node197 [label=termOperator]
+	node175 -> node197
+	node198 [label="/"]
+	node197 -> node198
+	node199 [label=factor]
+	node175 -> node199
+	node200 [label=2]
+	node199 -> node200
+	node201 [label=";"]
+	node159 -> node201
+	node202 [label=declaration]
+	node156 -> node202
+	node203 [label=command]
+	node202 -> node203
+	node204 [label=assignment]
+	node203 -> node204
+	node205 [label=j]
+	node204 -> node205
+	node206 [label="="]
+	node204 -> node206
+	node207 [label=expression]
+	node204 -> node207
+	node208 [label=arithmeticExpression]
+	node207 -> node208
+	node209 [label=term]
+	node208 -> node209
+	node210 [label=factor]
+	node209 -> node210
+	node211 [label=j]
+	node210 -> node211
+	node212 [label=arithmeticOperator]
+	node208 -> node212
+	node213 [label="+"]
+	node212 -> node213
+	node214 [label=term]
+	node208 -> node214
+	node215 [label=factor]
+	node214 -> node215
+	node216 [label=1]
+	node215 -> node216
+	node217 [label=";"]
+	node204 -> node217
+	node218 [label="}"]
+	node154 -> node218
+	node219 [label=declaration]
+	node114 -> node219
+	node220 [label=command]
+	node219 -> node220
+	node221 [label=outputCommand]
+	node220 -> node221
+	node222 [label=roarout]
+	node221 -> node222
+	node223 [label="("]
+	node221 -> node223
+	node224 [label=expression]
+	node221 -> node224
+	node225 [label=arithmeticExpression]
+	node224 -> node225
+	node226 [label=term]
+	node225 -> node226
+	node227 [label=factor]
+	node226 -> node227
+	node228 [label=linha]
+	node227 -> node228
+	node229 [label=")"]
+	node221 -> node229
+	node230 [label=declaration]
+	node114 -> node230
+	node231 [label=command]
+	node230 -> node231
+	node232 [label=assignment]
+	node231 -> node232
+	node233 [label=i]
+	node232 -> node233
+	node234 [label="="]
+	node232 -> node234
+	node235 [label=expression]
+	node232 -> node235
+	node236 [label=arithmeticExpression]
+	node235 -> node236
+	node237 [label=term]
+	node236 -> node237
+	node238 [label=factor]
+	node237 -> node238
+	node239 [label=i]
+	node238 -> node239
+	node240 [label=arithmeticOperator]
+	node236 -> node240
+	node241 [label="+"]
+	node240 -> node241
+	node242 [label=term]
+	node236 -> node242
+	node243 [label=factor]
+	node242 -> node243
+	node244 [label=1]
+	node243 -> node244
+	node245 [label=";"]
+	node232 -> node245
+	node246 [label="}"]
+	node112 -> node246
+	node247 [label="}"]
+	node78 -> node247
+	node248 [label="@end"]
+	node1 -> node248
+	node249 [label=<EOF>]
+	node1 -> node249
+}
