@@ -60,11 +60,16 @@ block: LBRACE declarations RBRACE;
 
 // Expressões
 expression
-    : logicalExpression
-    | arithmeticExpression
-    | STRING
+    : expression PLUS expression               #concatExpr
+    | logicalExpression                        #logicExpr
+    | arithmeticExpression                     #arithExpr
+    | STRING                                   #stringExpr
+    | ID                                       #idExpr
+    | NUMBER                                   #numberExpr
+    | LPAREN expression RPAREN                 #parenExpr
     ;
 
+// Expressões aritméticas
 arithmeticExpression
     : term (arithmeticOperator term)*
     ;
@@ -82,6 +87,7 @@ factor
     | ID
     ;
 
+// Expressões lógicas
 logicalExpression
     : logicalTerm (OR logicalTerm)*
     ;

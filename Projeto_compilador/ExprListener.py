@@ -116,12 +116,66 @@ class ExprListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by ExprParser#expression.
-    def enterExpression(self, ctx:ExprParser.ExpressionContext):
+    # Enter a parse tree produced by ExprParser#stringExpr.
+    def enterStringExpr(self, ctx:ExprParser.StringExprContext):
         pass
 
-    # Exit a parse tree produced by ExprParser#expression.
-    def exitExpression(self, ctx:ExprParser.ExpressionContext):
+    # Exit a parse tree produced by ExprParser#stringExpr.
+    def exitStringExpr(self, ctx:ExprParser.StringExprContext):
+        pass
+
+
+    # Enter a parse tree produced by ExprParser#logicExpr.
+    def enterLogicExpr(self, ctx:ExprParser.LogicExprContext):
+        pass
+
+    # Exit a parse tree produced by ExprParser#logicExpr.
+    def exitLogicExpr(self, ctx:ExprParser.LogicExprContext):
+        pass
+
+
+    # Enter a parse tree produced by ExprParser#numberExpr.
+    def enterNumberExpr(self, ctx:ExprParser.NumberExprContext):
+        pass
+
+    # Exit a parse tree produced by ExprParser#numberExpr.
+    def exitNumberExpr(self, ctx:ExprParser.NumberExprContext):
+        pass
+
+
+    # Enter a parse tree produced by ExprParser#arithExpr.
+    def enterArithExpr(self, ctx:ExprParser.ArithExprContext):
+        pass
+
+    # Exit a parse tree produced by ExprParser#arithExpr.
+    def exitArithExpr(self, ctx:ExprParser.ArithExprContext):
+        pass
+
+
+    # Enter a parse tree produced by ExprParser#parenExpr.
+    def enterParenExpr(self, ctx:ExprParser.ParenExprContext):
+        pass
+
+    # Exit a parse tree produced by ExprParser#parenExpr.
+    def exitParenExpr(self, ctx:ExprParser.ParenExprContext):
+        pass
+
+
+    # Enter a parse tree produced by ExprParser#idExpr.
+    def enterIdExpr(self, ctx:ExprParser.IdExprContext):
+        pass
+
+    # Exit a parse tree produced by ExprParser#idExpr.
+    def exitIdExpr(self, ctx:ExprParser.IdExprContext):
+        pass
+
+
+    # Enter a parse tree produced by ExprParser#concatExpr.
+    def enterConcatExpr(self, ctx:ExprParser.ConcatExprContext):
+        pass
+
+    # Exit a parse tree produced by ExprParser#concatExpr.
+    def exitConcatExpr(self, ctx:ExprParser.ConcatExprContext):
         pass
 
 

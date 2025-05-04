@@ -17,7 +17,7 @@ if n <= 0 then {
             linha = linha + " " + (i * (i - 1)) / 2;
             j = j + 1;
         }
-        roarout(linha);
+        roarout(linha)
         i = i + 1;
     }
 }
