@@ -1,10 +1,5 @@
 grammar Expr;
 
-@lexer::members {
-    def reportLexicalError(self):
-        raise Exception(f"ERRO LÉXICO na linha {self.line}, coluna {self.column}: {self.text}")
-}
-
 @parser::members {
     def notifyErrorListeners(self, offendingToken, msg, e):
         line = offendingToken.line
@@ -163,4 +158,4 @@ WS: [ \t\r\n]+ -> skip;
 COMMENT: '//' ~[\r\n]* -> skip;
 
 // Erro léxico genérico
-ErrorChar: . {self.reportLexicalError()};
+ErrorChar: . ;
